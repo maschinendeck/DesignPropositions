@@ -196,11 +196,11 @@ module letter_m() {
     linear_extrude(height = 1) {
         union() {
             difference() {
-                text("M", font="Apple LiGothic:style=Medium;", size=42, halign = "center", valign = "center");
-                text("M", font="Apple LiGothic:style=Medium;", size=39, halign = "center", valign = "center");
+                text("M", font="Apple LiGothic Medium:style=Regular", size=42, halign = "center", valign = "center");
+                text("M", font="Apple LiGothic Medium:style=Regular", size=39, halign = "center", valign = "center");
             };
         };
-        text("M", font="Apple LiGothic:style=Medium;", size=36, halign = "center", valign = "center");        
+        text("M", font="Apple LiGothic Medium:style=Regular", size=36, halign = "center", valign = "center");        
     }
 }
 
@@ -217,6 +217,25 @@ module maschinendeck() {
 }
 
 maschinendeck();
+
+/*
+projection() {
+    resize([60, 60, 1]) {
+        translate([0, 0, circuit_width / 2])
+            circuit();
+        letter_m();
+    };
+};
+*/
+
+/*
+projection() {
+	resize([50, 50, 1]) {
+		circuit();
+		letter_m();
+	}
+}
+*/
 
 // vim: set ts=4 :
 
